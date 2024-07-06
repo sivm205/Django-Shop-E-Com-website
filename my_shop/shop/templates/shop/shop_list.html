@@ -1,0 +1,15 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}Shops{% endblock %}
+
+{% block content %}
+    <h1>Shop List</h1>
+    {% for shop in shops %}
+        <div>
+            <h2>{{ shop.name }}</h2>
+            <p>Address: {{ shop.address }}</p>
+            <p>Category: {{ shop.category }}</p>
+            <p>Established: {{ shop.est_year }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
